@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advice</title>
+  <link rel="icon" href="images/Logo.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <%- include("partials/header.ejs") %>
+
+  <div class="advice-container">
+    <h1>Community Advice</h1>
+
+    <div class="advice-list">
+      <% advices.forEach(function(item, index) { %>
+        <div class="advice-card">
+          <p class="advice-text">"<%= item.advice %>"</p>
+          <p class="advice-user">— <%= item.username %></p>
+          <form action="/delete/<%= index %>" method="POST" onsubmit="return confirm('Delete this advice?');">
+            <button class="delete-btn" type="submit">Delete</button>
+          </form>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <%- include("partials/footer.ejs") %> 
+</body>
+</html>

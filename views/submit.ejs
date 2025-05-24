@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+    <link rel="icon" href="images/Logo.png">
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+
+    <div class="submit">
+        <h2>Submit Your Advice</h2>
+        <form action="/submit" method="POST">
+          <input type="text" name="username" placeholder="Your name" required><br><br>
+          <textarea name="advice" placeholder="Your advice" required></textarea><br><br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <%- include("partials/footer.ejs") %> 
+</body>
+</html>

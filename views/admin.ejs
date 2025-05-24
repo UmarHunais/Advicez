@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="images/Logo.png">
+</head>
+<body>
+  <%- include("partials/header.ejs") %>
+  <h2>Manage Advices</h2>
+  <a href="/logout">Logout</a>
+
+  <% advices.forEach((item, index) => { %>
+    <div class="advice-card">
+      <p>"<%= item.advice %>" — <%= item.username %></p>
+      <form action="/delete/<%= index %>" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  <% }) %>
+  <%- include("partials/footer.ejs") %> 
+</body>
+</html>

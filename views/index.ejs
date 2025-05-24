@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advicez</title>
+  <link rel="icon" href="images/Logo.png">
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- Add this inside the <head> section -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-dI6rEj+IY4OosAqFaH0Z6SwtdplOgr8F3FhIwH2J8j+ZWfvlVZJ5p5R+1rIxW2a6bZ3MRYt92xOqbw8+dV5oNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+<%- include("partials/header.ejs") %>
+
+  <main>
+    <div class="card">
+      <div class="label">HERE’S YOUR ADVICE</div>
+      <div class="advice"><%= advice %></div>
+      <form method="POST">
+        <button class="refresh-btn" type="submit">Get New Advice</button>
+      </form>
+    </div>
+  </main><!-- Footer Section -->
+
+    
+
+  <!-- <footer>
+    Made with 💙 by Umar Hunais
+  </footer> -->
+  <header>
+
+ <%- include("partials/footer.ejs") %> 
+</body>
+</html>
